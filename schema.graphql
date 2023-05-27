@@ -1,0 +1,45 @@
+type Initialized @entity(immutable: true) {
+  id: Bytes!
+  version: Int! # uint8
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type OwnershipTransferred @entity(immutable: true) {
+  id: Bytes!
+  previousOwner: Bytes! # address
+  newOwner: Bytes! # address
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Register @entity(immutable: true) {
+  id: Bytes!
+  prefix: Bytes! # bytes32
+  entryId: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type RegisterOrganization @entity(immutable: true) {
+  id: Bytes!
+  prefix: Bytes! # bytes32
+  registrant: Bytes! # address
+  tokenGate: [Bytes!]! # address[]
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type UpdateOrganization @entity(immutable: true) {
+  id: Bytes!
+  prefix: Bytes! # bytes32
+  registrant: Bytes! # address
+  tokenGate: [Bytes!]! # address[]
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

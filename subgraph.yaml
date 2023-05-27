@@ -1,0 +1,36 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: DpidRegistry
+    network: goerli
+    source:
+      address: "0xc5abc8947631c4b03A1924BE95F3a678eF2F2112"
+      abi: DpidRegistry
+      startBlock: 8441748
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - Initialized
+        - OwnershipTransferred
+        - Register
+        - RegisterOrganization
+        - UpdateOrganization
+      abis:
+        - name: DpidRegistry
+          file: ./abis/DpidRegistry.json
+      eventHandlers:
+        - event: Initialized(uint8)
+          handler: handleInitialized
+        - event: OwnershipTransferred(indexed address,indexed address)
+          handler: handleOwnershipTransferred
+        - event: Register(bytes32,uint256)
+          handler: handleRegister
+        - event: RegisterOrganization(bytes32,address,address[])
+          handler: handleRegisterOrganization
+        - event: UpdateOrganization(bytes32,address,address[])
+          handler: handleUpdateOrganization
+      file: ./src/dpid-registry.ts
