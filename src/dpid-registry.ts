@@ -64,7 +64,7 @@ export function handleRegisterOrganization(
   )
   entity.prefix = event.params.prefix
   entity.registrant = event.params.registrant
-  entity.tokenGate = event.params.tokenGate
+  // entity.tokenGate = event.params.tokenGate
 
   entity.blockNumber = event.block.number
   entity.blockTimestamp = event.block.timestamp
@@ -79,7 +79,7 @@ export function handleUpdateOrganization(event: UpdateOrganizationEvent): void {
   )
   entity.prefix = event.params.prefix
   entity.registrant = event.params.registrant
-  entity.tokenGate = event.params.tokenGate
+  // entity.tokenGate = event.params.tokenGate
 
   entity.blockNumber = event.block.number
   entity.blockTimestamp = event.block.timestamp

@@ -1,13 +1,13 @@
 {
-  "name": "dpid-registry-2",
-  "license": "UNLICENSED",
+  "name": "dpid-registry",
+  "license": "MIT",
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ dpid-registry-2",
-    "create-local": "graph create --node http://localhost:8020/ dpid-registry-2",
-    "remove-local": "graph remove --node http://localhost:8020/ dpid-registry-2",
-    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 dpid-registry-2",
+    "deploy": "graph deploy --node https://api.studio.thegraph.com/deploy/ dpid-registry",
+    "create-local": "graph create --node http://localhost:8020/ dpid-registry",
+    "remove-local": "graph remove --node http://localhost:8020/ dpid-registry",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 dpid-registry",
     "test": "graph test"
   },
   "dependencies": {
