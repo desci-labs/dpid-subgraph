@@ -4,11 +4,11 @@ schema:
 dataSources:
   - kind: ethereum
     name: DpidRegistry
-    network: sepolia
+    network: goerli
     source:
-      address: "0xb9F1b29d9435Ff4772F57067C927367B337B0456"
+      address: "0xd92C9cC823926145b89263cd3A4CeD6161a8bDD5"
       abi: DpidRegistry
-      startBlock: 5482430
+      startBlock: 8441748
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
